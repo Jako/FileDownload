@@ -1,0 +1,12 @@
+jpg=page_white_picture.png,
+png=page_white_picture.png,
+gif=page_white_picture.png,
+php=page_white_php.png,
+js=page_white_cup.png,
+pdf=page_white_acrobat.png,
+txt=page_white_text.png,
+zip=page_white_zip.png,
+html=page_white_world.png,
+parent=arrow_up.png,
+folder=folder.png,
+default=page_white.png

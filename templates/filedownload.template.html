@@ -1,0 +1,36 @@
+<!-- This is the header template -->
+<table>
+	<tr[+fd.class+]><td colspan="4"><strong>Path: [+fd.path+]</strong></td></tr>
+	<tr><th colspan="2">Filename</th><th>Filesize</th><th>Date</th></tr>
+<!-- Fd:Splitter -->
+<!-- This is the parent template -->
+	<tr[+fd.class+]>
+		<td><img src="[+fd.image+]"/></td>
+		<td colspan="3"><a href="[+fd.link+]">Up Level</a></td>
+	</tr>
+<!-- Fd:Splitter -->
+<!-- This is the folder template -->
+	<tr[+fd.class+]>
+		<td><img src="[+fd.image+]"/></td>
+		<td colspan="3"><a href="[+fd.link+]">[+fd.filename+]</a></td>
+	</tr>
+<!-- Fd:Splitter -->
+<!-- This is the file template -->
+	<tr[+fd.class+]>
+		<td><img src="[+fd.image+]"/></td>
+		<td><a href="[+fd.link+]">[+fd.filename+]</a> <span style="font-size:80%">([+fd.count+] downloads) [+fd.delete+]</span></td>
+		<td>[+fd.sizetext+]</td>
+		<td>[+fd.date+]</td>
+	</tr>
+	<tr><td></td><td colspan="3">[+fd.description+]</td></tr>
+<!-- Fd:Splitter -->
+<!-- This is the delete link template -->
+	<a href="[+fd.deletelink+]">Delete</a>
+<!-- Fd:Splitter -->
+<!-- This is the template used when &amp;groupByDirectory=`1` -->
+	<tr[+fd.class+]>
+		<td colspan="4"><strong>[+fd.directory+]</strong></td>
+	</tr>
+<!-- Fd:Splitter -->
+<!-- This is the footer template -->
+</table>
