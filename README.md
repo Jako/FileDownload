@@ -162,7 +162,7 @@ If you use friendly URLs you should also add the following line to your ".htacce
 ```
 RewriteRule ^(download)/(.+)$ index.php?q=$1&d=$2 [L,QSA]
 ```
-With this line the file will be downloadable on: `http://www.mymodxsite.com/downloads/myzipfile.zip`
+With this line the file will be downloadable on: `http://www.mymodxsite.com/download/myzipfile.zip`
 
 Change the word `download` to the alias or the alias path of document showing the downloads. 
 
