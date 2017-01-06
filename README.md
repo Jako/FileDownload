@@ -1,4 +1,8 @@
-#FileDownload for MODX
+#THIS PROJECT IS DEPRECATED
+
+FileDownload is not maintained anymore. It maybe does not work in Evolution 1.1 anymore. Please fork it and bring it back to life, if you need it.
+
+#FileDownload
 
 ##Part 1: Snippet
 
