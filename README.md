@@ -1,29 +1,29 @@
-#THIS PROJECT IS DEPRECATED
+# THIS PROJECT IS DEPRECATED
 
 FileDownload is not maintained anymore. It maybe does not work in Evolution 1.1 anymore. Please fork it and bring it back to life, if you need it.
 
-#FileDownload
+# FileDownload
 
-##Part 1: Snippet
+## Part 1: Snippet
 
 * Snippet created by [Kyle Jaebker](http://www.muddydogpaws.com)
 * Short Desc: Lists files from a folder(s) for downloading.
 * Version: 2.7
 * Last Modified: 21/05/2013
 
-###Snippet Install Instructions
+### Snippet Install Instructions
 		
 1. Copy the `filedownload` folder to `assets/snippets`.
 2. Create a new snippet named FileDownload and and paste the following line
 as snippet code `<?php return include(MODX_BASE_PATH.'assets/snippets/filedownload/filedownload.snippet.php'); ?>`
 3. Use the snippet call to customize the display of the download list.
 		
-###Snippet Usage
+### Snippet Usage
 ```
 [!FileDownload? &getFolder=`assets/snippets/filedownload`!]
 ```
 	
-####Basic Parameters
+#### Basic Parameters
 
 Name | Description | Default
 ---- | ----------- | -------
@@ -39,14 +39,14 @@ hideExt | The hideExt parameter will remove any of the specified extensions from
 dateFormat | The dateFormat parameter will change the format of the date displayed for each file in the output. | Y-m-d
 userFolder | The userFolder parameter is used to activate the change of the displayed directory by `getFolder` parameter or `FileDownloadFolder` template variable to a subfolder with the username of a logged webuser | 0
 
-####Permission Parameters
+#### Permission Parameters
 
 Name | Description | Default
 ---- | ----------- | -------
 downloadGroups | The downloadGroups parameter will make the download link active for users that belong to the specified groups. If a user is not logged in they will receive a JavaScript alert with the message contained in the noDownload language setting. Multiple groups can be specified by using a comma delimited list. | -
 deleteGroups | The parameter deleteGroups allows the specified web user groups to delete files from the listing. The link will only be displayed for users that are logged in and in the specified web user group. | -
 
-####Counting Parameters
+#### Counting Parameters
 
 Name | Description | Default
 ---- | ----------- | -------
@@ -54,14 +54,14 @@ countDownloads | With the countDownloads parameter set to 1, everytime a user do
 useDbCount | The useDbCount parameter allows the count information to be stored in wither the database or in a file. The defualt setting is to include the counts in the database, to store the counts in a file set this to 0. | 1
 skipTableCheck | When using the database for counting downloads set this to 1 for an added speed boost. This will eliminate the check to see if the count table needs added. Do not set this to 1 when running the snippet for the first time, or the table will not get added. | 0
 
-####Image Parameters
+#### Image Parameters
 
 Name | Description | Default
 ---- | ----------- | -------
 imgLocat | The imgLocat parameter holds the path to the images to associate with each file extension. The images will be outputted with [+fd.image+] placeholder. | -
 imgTypes | The imgTypes parameter allows for associations between file extensions and an image. The information on these associations should be put into a chunk similar to the example below. Associations should be in a comma delimited list with an equal sign between the extension and the image name. The parent extension is used for getting the image for the parent folder link when using directory browsing. The folder extension is used for getting the image to associate with a directory. The default extension is applied to all files with extensions not specified in the chunk. | - (example: `imgTypes.txt` in folder `templates`)
 
-####Template Parameters
+#### Template Parameters
 
 Name | Description | Default
 ---- | ----------- | -------
@@ -79,7 +79,7 @@ directoryCss | This parameter specifies the class that will be applied to the di
 pathCss | This parameter specifies the class that will be applied to the path when using directory browsing. | fd-path
 extCss | With this parameter set to 1 a class will be added to each file with the files extension. For example, a pdf would get the class: fd-pdf. | 0
 
-####Language Parameters
+#### Language Parameters
 
 Name | Description | Default
 ---- | ----------- | -------
@@ -89,7 +89,7 @@ dirOpenError | This message will be displayed if the directory specified in the 
 notaDir | This message will be displayed if the directory specified in the getFolder parameter is not a directory. | The path specified is not a directory:
 noDownload | This message will be inserted into the javascript alert if a user does not have access to download a file. | You do not have permission to download this file.
 
-####Template Placeholder
+#### Template Placeholder
 
 Name | Description | Template
 ---- | ----------- | --------
@@ -111,7 +111,7 @@ fd.directory | Contains the path of the directory if parameter `groupByDirectory
 fd.filenumber | Contains the number of the current file/folder | file 
 fd.iteration | Contains the number of the current displayed table row | header, parent, folder, file, directory, footer
 
-##Part 2: Plugin
+## Part 2: Plugin
 
 * Plugin created by Adam Strzelecki
 * Short Desc: File downloads with respect to document's permissions
@@ -147,7 +147,7 @@ FileDownloadPlugin features:
 
 This plugin integrates with FileDownload snippet. You can use the snippet for embedding the file list onto the page while the plugin will be serving the downloads.
 
-###Plugin install instructions
+### Plugin install instructions
 
 1. Create new TV called `FileDownloadFolder` in the MODx Manager
 2. Create a new plugin called `FileDownloadPlugin` and and paste the following line 
@@ -179,5 +179,3 @@ If you want you can use different variable name, memory block size for the plugi
 &fileDownloadFolderTV=File Download Folder Template Variable;text;FileDownloadFolder
 &userFolder=Webuser based foldername;list;yes,no;no
 ```
-
-
